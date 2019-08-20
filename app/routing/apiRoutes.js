@@ -6,6 +6,6 @@ module.exports = function (app) {
     });
     app.post("/api/tables", function (req, res) {
         friendsData.push(req.body);
-        res.json(true);
+        res.json(friendsData);
     });
 }

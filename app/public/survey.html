@@ -190,9 +190,13 @@
             }
             console.log(newEnrty);
             $.post("/api/friends", newEnrty,
-                function (data) {
+                function (err,data) {
 
-                    console.log(data);
+                    if (data) {
+                        console.log(data);
+                    } else {
+                        console.log(err);
+                    }
 
                 });
         })
